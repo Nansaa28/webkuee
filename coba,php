@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastel Bakery</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+    }
+    
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn-primary {
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      transform: scale(1.05);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="gradient-bg"><!-- Header -->
+  <header class="py-6 px-8" style="background-color: #fff0f5;">
+   <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div>
+     <h1 id="bakery-name" class="text-3xl font-bold" style="color: #d81b60;">Sweet Delights</h1>
+     <p id="tagline" class="text-sm" style="color: #8e24aa;">Kue Lezat Dibuat dengan Cinta</p>
+    </div>
+    <nav class="hidden md:flex gap-8"><a href="#home" class="font-medium hover:underline" style="color: #d81b60;">Beranda</a> <a href="#about" class="font-medium hover:underline" style="color: #d81b60;">Tentang</a> <a href="#products" class="font-medium hover:underline" style="color: #d81b60;">Produk</a> <a href="#contact" class="font-medium hover:underline" style="color: #d81b60;">Kontak</a>
+    </nav>
+   </div>
+  </header><!-- Hero Section -->
+  <section id="home" class="py-20 px-8">
+   <div class="max-w-7xl mx-auto text-center">
+    <h2 id="hero-title" class="text-5xl md:text-6xl font-bold mb-6" style="color: #d81b60;">Kue Artisan Buatan Tangan</h2>
+    <p id="hero-subtitle" class="text-xl md:text-2xl mb-10" style="color: #8e24aa;">Setiap gigitan adalah kebahagiaan</p><button id="cta-button" class="btn-primary px-10 py-4 rounded-full text-lg font-semibold text-white" style="background-color: #d81b60;">Pesan Sekarang</button>
+   </div>
+  </section><!-- About Section -->
+  <section id="about" class="py-20 px-8" style="background-color: #f3e5f5;">
+   <div class="max-w-5xl mx-auto text-center">
+    <h3 id="about-title" class="text-4xl font-bold mb-6" style="color: #d81b60;">Tentang Kami</h3>
+    <p id="about-text" class="text-lg leading-relaxed" style="color: #6a1b9a;">Kami adalah toko kue keluarga yang berdedikasi untuk membuat kue-kue lezat dengan bahan-bahan berkualitas tinggi. Setiap kue dibuat dengan cinta dan perhatian terhadap detail, memastikan setiap pelanggan mendapatkan pengalaman yang tak terlupakan.</p>
+   </div>
+  </section><!-- Products Section -->
+  <section id="products" class="py-20 px-8">
+   <div class="max-w-7xl mx-auto">
+    <h3 id="products-title" class="text-4xl font-bold text-center mb-12" style="color: #d81b60;">Produk Kami</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8"><!-- Product Card 1 -->
+     <div class="card-hover rounded-2xl p-6 text-center" style="background-color: #fff0f5;">
+      <div class="text-6xl mb-4">
+       🧁
+      </div>
+      <h4 class="text-2xl font-bold mb-3" style="color: #d81b60;">Cupcakes</h4>
+      <p class="mb-4" style="color: #8e24aa;">Cupcakes lembut dengan frosting creamy dalam berbagai rasa</p>
+      <p class="text-2xl font-bold" style="color: #d81b60;">Rp 25.000</p>
+     </div><!-- Product Card 2 -->
+     <div class="card-hover rounded-2xl p-6 text-center" style="background-color: #fff0f5;">
+      <div class="text-6xl mb-4">
+       🎂
+      </div>
+      <h4 class="text-2xl font-bold mb-3" style="color: #d81b60;">Kue Ulang Tahun</h4>
+      <p class="mb-4" style="color: #8e24aa;">Kue custom untuk momen spesial Anda</p>
+      <p class="text-2xl font-bold" style="color: #d81b60;">Rp 350.000</p>
+     </div><!-- Product Card 3 -->
+     <div class="card-hover rounded-2xl p-6 text-center" style="background-color: #fff0f5;">
+      <div class="text-6xl mb-4">
+       🍰
+      </div>
+      <h4 class="text-2xl font-bold mb-3" style="color: #d81b60;">Pastry</h4>
+      <p class="mb-4" style="color: #8e24aa;">Pastry renyah dan manis untuk teman minum teh</p>
+      <p class="text-2xl font-bold" style="color: #d81b60;">Rp 35.000</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Contact Section -->
+  <section id="contact" class="py-20 px-8" style="background-color: #f3e5f5;">
+   <div class="max-w-3xl mx-auto text-center">
+    <h3 id="contact-title" class="text-4xl font-bold mb-4" style="color: #d81b60;">Hubungi Kami</h3>
+    <p id="contact-subtitle" class="text-lg mb-8" style="color: #8e24aa;">Kami siap melayani pesanan Anda</p>
+    <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+     <div class="flex items-center gap-3"><span class="text-3xl">📞</span> <span class="text-lg" style="color: #6a1b9a;">+62 812-3456-7890</span>
+     </div>
+     <div class="flex items-center gap-3"><span class="text-3xl">📧</span> <span class="text-lg" style="color: #6a1b9a;">hello@sweetdelights.com</span>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="py-8 px-8 text-center" style="background-color: #fff0f5;">
+   <p style="color: #8e24aa;">© 2024 Sweet Delights. Semua hak dilindungi.</p>
+  </footer>
+  <script>
+    const defaultConfig = {
+      background_color: "#fce4ec",
+      surface_color: "#fff0f5",
+      text_color: "#d81b60",
+      primary_action_color: "#d81b60",
+      secondary_action_color: "#8e24aa",
+      font_family: "system-ui, -apple-system, sans-serif",
+      font_size: 16,
+      bakery_name: "Sweet Delights",
+      tagline: "Kue Lezat Dibuat dengan Cinta",
+      hero_title: "Kue Artisan Buatan Tangan",
+      hero_subtitle: "Setiap gigitan adalah kebahagiaan",
+      cta_button: "Pesan Sekarang",
+      about_title: "Tentang Kami",
+      about_text: "Kami adalah toko kue keluarga yang berdedikasi untuk membuat kue-kue lezat dengan bahan-bahan berkualitas tinggi. Setiap kue dibuat dengan cinta dan perhatian terhadap detail, memastikan setiap pelanggan mendapatkan pengalaman yang tak terlupakan.",
+      products_title: "Produk Kami",
+      contact_title: "Hubungi Kami",
+      contact_subtitle: "Kami siap melayani pesanan Anda"
+    };
+
+    async function onConfigChange(config) {
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      const fontSize = config.font_size || defaultConfig.font_size;
+
+      document.body.style.background = `linear-gradient(135deg, ${backgroundColor} 0%, ${surfaceColor} 100%)`;
+      
+      const header = document.querySelector('header');
+      header.style.backgroundColor = surfaceColor;
+      
+      const aboutSection = document.getElementById('about');
+      aboutSection.style.backgroundColor = surfaceColor;
+      
+      const contactSection = document.getElementById('contact');
+      contactSection.style.backgroundColor = surfaceColor;
+      
+      const footer = document.querySelector('footer');
+      footer.style.backgroundColor = surfaceColor;
+      
+      const productCards = document.querySelectorAll('.card-hover');
+      productCards.forEach(card => {
+        card.style.backgroundColor = surfaceColor;
+      });
+
+      document.getElementById('bakery-name').textContent = config.bakery_name || defaultConfig.bakery_name;
+      document.getElementById('bakery-name').style.color = textColor;
+      document.getElementById('bakery-name').style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+      document.getElementById('bakery-name').style.fontSize = `${fontSize * 1.875}px`;
+      
+      document.getElementById('tagline').textContent = config.tagline || defaultConfig.tagline;
+      document.getElementById('tagline').style.color = secondaryActionColor;
+      document.getElementById('tagline').style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+      document.getElementById('tagline').style.fontSize = `${fontSize * 0.875}px`;
+      
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        link.style.color = textColor;
+        link.style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+        link.style.fontSize = `${fontSize}px`;
+      });
+      
+      document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-title').style.color = textColor;
+      document.getElementById('hero-title').style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+      document.getElementById('hero-title').style.fontSize = `${fontSize * 3.75}px`;
+      
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('hero-subtitle').style.color = secondaryActionColor;
+      document.getElementById('hero-subtitle').style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+      document.getElementById('hero-subtitle').style.fontSize = `${fontSize * 1.5}px`;
+      
+      document.getElementById('cta-button').textContent = config.cta_button || defaultConfig.cta_button;
+      document.getElementById('cta-button').style.backgroundColor = primaryActionColor;
+      document.getElementById('cta-button').style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+      document.getElementById('cta-button').style.fontSize = `${fontSize * 1.125}px`;
+      
+      document.getElementById('about-title').textContent = config.about_title || defaultConfig.about_title;
+      document.getElementById('about-title').style.color = textColor;
+      document.getElementById('about-title').style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+      document.getElementById('about-title').style.fontSize = `${fontSize * 2.5}px`;
+      
+      document.getElementById('about-text').textContent = config.about_text || defaultConfig.about_text;
+      document.getElementById('about-text').style.color = secondaryActionColor;
+      document.getElementById('about-text').style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+      document.getElementById('about-text').style.fontSize = `${fontSize * 1.125}px`;
+      
+      document.getElementById('products-title').textContent = config.products_title || defaultConfig.products_title;
+      document.getElementById('products-title').style.color = textColor;
+      document.getElementById('products-title').style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+      document.getElementById('products-title').style.fontSize = `${fontSize * 2.5}px`;
+      
+      const productTitles = document.querySelectorAll('.card-hover h4');
+      productTitles.forEach(title => {
+        title.style.color = textColor;
+        title.style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+        title.style.fontSize = `${fontSize * 1.5}px`;
+      });
+      
+      const productDescriptions = document.querySelectorAll('.card-hover p:not(.text-2xl)');
+      productDescriptions.forEach(desc => {
+        desc.style.color = secondaryActionColor;
+        desc.style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+        desc.style.fontSize = `${fontSize}px`;
+      });
+      
+      const productPrices = document.querySelectorAll('.card-hover .text-2xl');
+      productPrices.forEach(price => {
+        price.style.color = textColor;
+        price.style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+        price.style.fontSize = `${fontSize * 1.5}px`;
+      });
+      
+      document.getElementById('contact-title').textContent = config.contact_title || defaultConfig.contact_title;
+      document.getElementById('contact-title').style.color = textColor;
+      document.getElementById('contact-title').style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+      document.getElementById('contact-title').style.fontSize = `${fontSize * 2.5}px`;
+      
+      document.getElementById('contact-subtitle').textContent = config.contact_subtitle || defaultConfig.contact_subtitle;
+      document.getElementById('contact-subtitle').style.color = secondaryActionColor;
+      document.getElementById('contact-subtitle').style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+      document.getElementById('contact-subtitle').style.fontSize = `${fontSize * 1.125}px`;
+      
+      const contactInfo = document.querySelectorAll('#contact .flex span:last-child');
+      contactInfo.forEach(info => {
+        info.style.color = secondaryActionColor;
+        info.style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+        info.style.fontSize = `${fontSize * 1.125}px`;
+      });
+      
+      const footerText = document.querySelector('footer p');
+      footerText.style.color = secondaryActionColor;
+      footerText.style.fontFamily = `${fontFamily}, system-ui, sans-serif`;
+      footerText.style.fontSize = `${fontSize}px`;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.secondary_action_color = value;
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["bakery_name", config.bakery_name || defaultConfig.bakery_name],
+        ["tagline", config.tagline || defaultConfig.tagline],
+        ["hero_title", config.hero_title || defaultConfig.hero_title],
+        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+        ["cta_button", config.cta_button || defaultConfig.cta_button],
+        ["about_title", config.about_title || defaultConfig.about_title],
+        ["about_text", config.about_text || defaultConfig.about_text],
+        ["products_title", config.products_title || defaultConfig.products_title],
+        ["contact_title", config.contact_title || defaultConfig.contact_title],
+        ["contact_subtitle", config.contact_subtitle || defaultConfig.contact_subtitle]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99be3c3b26457550',t:'MTc2MjcwMTAwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
